@@ -3,7 +3,7 @@ import colors from 'vuetify/es5/util/colors'
 export default {
   target: 'static',
   router: {
-    base: '/'
+    base: process.env === 'development' ? '/' : '/portfolio'
   },
   ssr: false,
   /*
