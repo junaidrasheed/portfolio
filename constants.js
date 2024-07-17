@@ -198,7 +198,7 @@ export default {
       techStack: ['Vue.js', 'Laravel', 'Tailwind CSS', 'MySQL', 'Redis'],
       isConfidential: true,
       description: `Vision is TheTie's application designed for Enterprises, Crypto Companies, and Hedge Funds to monitor their market presence and competition. In partnership with Kubro, it offers users access to market-moving news faster than any other platform currently available`,
-      cover: 'vision.png',
+      cover: 'sigdev.svg',
       achievements: [
         'Played a key role in migrating the application from Vue 2 to Vue 3',
         'Developed an alerting tool which notify users on variety of different channels i.e. Slack, Discord, Email, Twitter (X), and Telegram.',
@@ -216,6 +216,51 @@ export default {
         'Helped migrating the application infrastructure to AWS Cloud.',
         'Actively engaged in migrating the application from Laravel 4 to Laravel 5'
       ]
+    },
+    {
+      title: 'Cointelegraph Markets Pro',
+      techStack: ['Vue', 'Rails', 'Tailwind CSS'],
+      cover: 'cointelegraph.png',
+      isConfidential: false,
+      link: 'https://pro.cointelegraph.com',
+      description:
+        'A simple and easy-to-use dashboard powered by the same technology and data used by the leading institutional investors'
+    },
+    {
+      title: 'Altcoin Alert',
+      cover: 'altcoin_alert.png',
+      techStack: ['Vue', 'Rails', 'Tailwind CSS'],
+      isConfidential: false,
+      link: 'https://app.altcoinalert.com',
+      description:
+        'Private software developed for top hedge funds now available to the general public for the first time.'
+    },
+    {
+      title: 'Frosty Metrics',
+      cover: 'frostymetrics.png',
+      techStack: ['Vue', 'Nuxt', 'Tailwind CSS'],
+      isConfidential: false,
+      link: 'https://frostymetrics.com',
+      description:
+        'A fully custom public dashboard for Avalanche Ecosystem, containing Chill Factor, News Feed and much more.'
+    },
+    {
+      title: 'Tezos Dashboard',
+      cover: 'tezos.png',
+      techStack: ['Vue', 'Nuxt', 'Tailwind CSS'],
+      isConfidential: false,
+      link: 'https://tezos.thetie.io',
+      description:
+        'A public dashboard for Tezos and its ecosystem which provides users insights on Price, Active Addresses, Transactions and NFTs'
+    },
+    {
+      title: 'Hedera Dashboard',
+      cover: 'hedera.png',
+      techStack: ['Vue', 'Nuxt', 'Tailwind CSS'],
+      isConfidential: false,
+      link: 'https://hedera.thetie.io',
+      description:
+        'A public dashboard for Hedera and its ecosystem which provides users insights on Price and its trends, along with a customized News Feed and much more.'
     }
   ]
 }

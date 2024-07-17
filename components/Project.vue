@@ -3,9 +3,11 @@
     <v-card class="project" dark elevation="24" data-aos="fade-up">
       <v-img
         class="white--text align-end"
-        height="200px"
+        :width="300"
+        :height="200"
+        aspect-ratio="16/9"
+        cover
         :alt="project.title"
-        :position="project.cover === 'covid19.png' ? 'top' : 'center'"
         :src="require(`@/assets/images/${project.cover}`)"
       >
         <v-expand-transition>
@@ -63,7 +65,7 @@
             </p>
             <p>{{ project.description }}</p>
 
-            <div class="my-2">
+            <div v-if="project.achievements" class="my-2">
               <b>Key Achievements</b>
               <ul>
                 <li v-for="(a, i) in project.achievements" :key="i">{{ a }}</li>
@@ -71,8 +73,8 @@
             </div>
 
             <div v-if="project.isConfidential" class="py-4">
-              This project is part of a corporate product, and its code is
-              therefore confidential.
+              This project is part of a corporate product, and its access is
+              therefore restricted.
             </div>
             <v-btn
               class="my-2 view-project"
@@ -81,11 +83,11 @@
               large
               color="black"
               elevation="0"
-              :disabled="!project.url"
+              :disabled="!project.link"
               @click="viewProject"
             >
               <v-icon v-if="project.isConfidential" left>mdi-lock</v-icon>
-              View code
+              Visit
             </v-btn>
           </v-card-text>
         </v-card>
@@ -109,8 +111,8 @@ export default {
   },
   methods: {
     viewProject() {
-      if (this.project.url) {
-        window.open(this.project.url, '_blank')
+      if (this.project.link) {
+        window.open(this.project.link, '_blank')
       }
     },
     toggleModal() {
